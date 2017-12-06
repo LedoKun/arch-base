@@ -1,4 +1,4 @@
-**Froked from (binhex/arch-base)[https://github.com/binhex/arch-base] to create an armhf image**
+**Froked from [binhex/arch-base](https://github.com/binhex/arch-base) to create an armhf image**
 
 **Application**
 
