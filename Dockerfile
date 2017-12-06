@@ -1,5 +1,5 @@
-FROM binhex/arch-scratch:latest
-MAINTAINER binhex
+FROM forumi0721/alpine-armhf-base:latest
+MAINTAINER LedoKun
 
 # additional files
 ##################
@@ -13,9 +13,15 @@ ADD build/root/*.sh /root/
 # install app
 #############
 
+# For cross compile on dockerhub
+RUN ["docker-build-start"]
+
 # run bash script to update base image, set locale, install supervisor and cleanup
 RUN chmod +x /root/*.sh && \
 	/bin/bash /root/install.sh
+
+# For cross compile on dockerhub
+RUN ["docker-build-end"]
 
 # env
 #####
@@ -27,7 +33,7 @@ ENV HOME /home/nobody
 ENV TERM xterm
 
 # set environment variables for language
-ENV LANG en_GB.UTF-8
+ENV LANG en_US.UTF-8
 
 # run
 #####
