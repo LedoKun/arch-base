@@ -1,4 +1,4 @@
-FROM forumi0721/alpine-armhf-base:latest
+FROM forumi0721/arch-armhf-base:latest
 MAINTAINER LedoKun
 
 # additional files
