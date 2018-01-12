@@ -83,10 +83,6 @@ usermod -d /home/nobody nobody
  
 # set shell for user nobody
 chsh -s /bin/bash nobody
- 
-# force re-install of ncurses 6.x with 5.x backwards compatibility (can be removed onced all apps have switched over to ncurses 6.x)
-#curl --connect-timeout 5 --max-time 600 --retry 5 --retry-delay 0 --retry-max-time 60 -o /tmp/ncurses5-compat.tar.xz -L https://github.com/binhex/arch-packages/raw/master/compiled/ncurses5-compat-libs-6.0+20161224-1-x86_64.pkg.tar.xz
-#pacman -U /tmp/ncurses5-compat.tar.xz --noconfirm
 
 # find latest tini release tag from github
 curl --connect-timeout 5 --max-time 600 --retry 5 --retry-delay 0 --retry-max-time 60 -o /tmp/tini_release_tag -L https://github.com/krallin/tini/releases
